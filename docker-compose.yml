@@ -1,0 +1,12 @@
+services:
+  mysql1:
+    image: mysql:8.0.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=develop
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql1-data:/var/lib/mysql
+
+volumes:
+  mysql1-data:
