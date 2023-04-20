@@ -1,4 +1,4 @@
-package com.pragma.powerup.domain.util;
+package com.pragma.powerup.domain.constantes;
 
 public class UsuarioConstante {
     public static final int LONGITUD_NOMBRE = 100;
@@ -11,6 +11,7 @@ public class UsuarioConstante {
             + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
     public static final String EXPRESION_REGULAR_CELULAR = "((^\\d{10}$)|(^\\+\\d{2}\\d{10}$))";
     public static final String EXPRESION_REGULAR_IDENTIFICAION = "\\d";
+    public static final int MAYOR_EDAD = 18;
 
     private UsuarioConstante(){}
 }

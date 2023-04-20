@@ -8,6 +8,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDateTime;
+
 @ExtendWith(MockitoExtension.class)
 public class PropietarioModelTest {
 
@@ -60,6 +62,20 @@ public class PropietarioModelTest {
     @Test
     public void errorGuardandoCelularNoValido(){
         assertThrows(ValidacionAtributoException.class, () -> propietarioModel.setCelular("30544699269"));
+    }
+
+    @Test
+    public void guardandoFechaNacimiento(){
+        propietarioModel.setFechaNacimiento(LocalDateTime.of(1991, 6, 4, 0, 0, 0));
+        assertNotNull(propietarioModel.getFechaNacimiento());
+    }
+
+    @Test
+    public void errorGuardandoFechaNacimiento(){
+        assertThrows(
+            ValidacionAtributoException.class, 
+            () -> propietarioModel.setFechaNacimiento(LocalDateTime.of(2020, 6, 4, 0, 0, 0))
+        );
     }
 
 }
