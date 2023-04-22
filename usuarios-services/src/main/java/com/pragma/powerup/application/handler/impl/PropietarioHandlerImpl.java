@@ -12,7 +12,10 @@ import com.pragma.powerup.domain.api.IPropietarioPort;
 
 import lombok.RequiredArgsConstructor;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class PropietarioHandlerImpl implements IPropietarioHandler {
 
