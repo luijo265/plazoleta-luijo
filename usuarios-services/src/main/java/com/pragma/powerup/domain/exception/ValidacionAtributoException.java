@@ -11,4 +11,19 @@ public class ValidacionAtributoException extends RuntimeException {
         this.nombreAtributo = nombreAtributo;
     }
 
+    public String getNombreAtributo() {
+        return nombreAtributo;
+    }
+
+    public void setNombreAtributo(String nombreAtributo) {
+        this.nombreAtributo = nombreAtributo;
+    }
+
+    public String getMensajeValidacion() {
+        return mensajeValidacion;
+    }
+
+    public void setMensajeValidacion(String mensajeValidacion) {
+        this.mensajeValidacion = mensajeValidacion;
+    }
 }

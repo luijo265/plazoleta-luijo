@@ -1,20 +1,25 @@
 package com.pragma.powerup.domain.usecase;
 
-import com.pragma.powerup.domain.api.IPropietarioUseCase;
+import com.pragma.powerup.domain.api.IPropietarioPort;
 import com.pragma.powerup.domain.model.PropietarioModel;
-import com.pragma.powerup.domain.spi.IPropietarioRepository;
+import com.pragma.powerup.domain.spi.IPropietarioPersistencePort;
 
-public class PropietarioUseCase implements IPropietarioUseCase{
+public class PropietarioUseCase implements IPropietarioPort {
 
-    private final IPropietarioRepository propietarioRepository;
+    private final IPropietarioPersistencePort propietarioRepository;
 
-    public PropietarioUseCase(IPropietarioRepository propietarioRepository){
-        this.propietarioRepository = propietarioRepository;
+    public PropietarioUseCase(){
+        this.propietarioRepository = null;
     }
 
     @Override
     public void crearPropietario(PropietarioModel propietario) {
-        propietarioRepository.guardarPropietario(propietario);
+//        propietarioRepository.guardarPropietario(propietario);
+        System.out.println("Creado el propietario");
+    }
+
+    @Override
+    public void crearPropietario() {
         System.out.println("Creado el propietario");
     }
     

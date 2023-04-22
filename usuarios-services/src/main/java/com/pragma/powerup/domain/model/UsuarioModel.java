@@ -1,6 +1,6 @@
 package com.pragma.powerup.domain.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.pragma.powerup.domain.constantes.UsuarioConstante;
 import com.pragma.powerup.domain.exception.ValidacionAtributoException;
@@ -15,7 +15,7 @@ public abstract class UsuarioModel {
     private String celular;
     private String correo;
     private String clave;
-    private LocalDateTime fechaNacimiento;
+    private LocalDate fechaNacimiento;
 
     private String rol;
 
@@ -97,12 +97,12 @@ public abstract class UsuarioModel {
     }
 
 
-    public LocalDateTime getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return this.fechaNacimiento;
     }
 
-    public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
-        if(fechaNacimiento == null || LocalDateTime.now().compareTo(fechaNacimiento) < 0){
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        if(fechaNacimiento == null || LocalDate.now().compareTo(fechaNacimiento) < 0){
             throw new ValidacionAtributoException("El campo fechaNacimiento no es valido", "fechaNacimiento", "El campo no valido");
         }
         if(CalculoEdadUtil.obtenerEdad(fechaNacimiento) < UsuarioConstante.MAYOR_EDAD){
