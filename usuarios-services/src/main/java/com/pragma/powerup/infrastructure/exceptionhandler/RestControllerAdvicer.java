@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class RestControllerAdvicer extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(ValidacionAtributoException.class)
-    public ResponseEntity handleValidacionAtributoException(ValidacionAtributoException ex, WebRequest request){
+    public ResponseEntity<ResponseValidacionAtributoDto> handleValidacionAtributoException(ValidacionAtributoException ex, WebRequest request){
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(ResponseValidacionAtributoDto.builder()

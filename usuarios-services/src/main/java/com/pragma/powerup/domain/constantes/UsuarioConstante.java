@@ -13,5 +13,7 @@ public class UsuarioConstante {
     public static final String EXPRESION_REGULAR_IDENTIFICAION = "\\d";
     public static final int MAYOR_EDAD = 18;
 
+    public static final String MESSAGE_CAMPO_NO_VALIDO = "Campo no válido";
+
     private UsuarioConstante(){}
 }

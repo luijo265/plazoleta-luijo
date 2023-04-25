@@ -25,8 +25,7 @@ public class PropietarioHandlerImpl implements IPropietarioHandler {
     private final IPropietarioRequestMapper propietarioRequestMapper;
 
     @Override
-    public PropietarioCreadoDto crearPropietario(CrearPropietarioDto propietario) 
-        throws Exception
+    public PropietarioCreadoDto crearPropietario(CrearPropietarioDto propietario)
     {
         try {
             propietarioUseCase.crearPropietario(

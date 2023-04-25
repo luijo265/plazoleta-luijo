@@ -5,6 +5,6 @@ import com.pragma.powerup.application.dto.response.PropietarioCreadoDto;
 
 public interface IPropietarioHandler {
     
-    public PropietarioCreadoDto crearPropietario(CrearPropietarioDto propietario) throws Exception;
+    public PropietarioCreadoDto crearPropietario(CrearPropietarioDto propietario);
 
 }

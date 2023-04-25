@@ -1,7 +1,6 @@
 package com.pragma.powerup.domain.usecase;
 
 import com.pragma.powerup.domain.api.IPropietarioPort;
-import com.pragma.powerup.domain.constantes.UsuarioConstante;
 import com.pragma.powerup.domain.model.PropietarioModel;
 import com.pragma.powerup.domain.spi.IUsuarioPersistencePort;
 
